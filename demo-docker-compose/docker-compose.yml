@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "8000:80"
+    volumes:
+      - ./app:/usr/share/nginx/html
+
+  web:
+    image: tomcat
+    ports:
+      - "9000:8080"
