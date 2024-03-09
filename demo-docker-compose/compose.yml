@@ -1,0 +1,11 @@
+services:
+  web:
+    build: ./app/
+    ports:
+      - "9000-10000:80"
+  db:
+    image: mysql
+    ports:
+      - "3000:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=hello
